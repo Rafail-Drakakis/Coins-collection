@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Coin Collection</title>
+  <link rel="stylesheet" href="https://cdn.simplecss.org/simple.css">
+</head>
+<body>
+  <header>
+    <h1>Coin Collection</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>Add or Check a Coin</h2>
+      <form id="coinForm">
+        <label>Country</label>
+        <input type="text" id="country" required placeholder="e.g. Greece">
+
+        <label>Denomination</label>
+        <input type="text" id="denomination" required placeholder="e.g. 2 Euro">
+
+        <label>Year</label>
+        <input type="number" id="year" required min="1800" max="2100">
+
+        <button type="submit">Save Coin</button>
+      </form>
+      <p id="msg"></p>
+    </section>
+
+    <section>
+      <h2>Unique Coins</h2>
+      <table id="uniqueTable">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Country</th>
+            <th>Denomination</th>
+            <th>Year</th>
+            <th>Count</th>
+            <th>Remove</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <p id="uniqueEmpty" class="muted"></p>
+    </section>
+
+    <section>
+      <h2>Duplicates</h2>
+      <table id="duplicateTable">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Country</th>
+            <th>Denomination</th>
+            <th>Year</th>
+            <th>Count</th>
+            <th>Remove</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <p id="duplicateEmpty" class="muted"></p>
+    </section>
+  </main>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
