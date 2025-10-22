@@ -1,6 +1,7 @@
 async function loadCoins() {
   const res = await fetch("/coins");
   const data = await res.json();
+  data.sort((a, b) => a.id - b.id);
 
   const uniqueBody = document.querySelector("#uniqueTable tbody");
   const duplicateBody = document.querySelector("#duplicateTable tbody");
